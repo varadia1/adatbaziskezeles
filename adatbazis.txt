@@ -1,0 +1,106 @@
+A teljes tábla adatainak lekérdezése:
+	SELECT * FROM "ellenorzo" WHERE 1
+	SELECT * FROM "ellenorzo"
+
+Az oszlopokat (mezőket) szűkítem:
+	SELECT "tantargy_neve" FROM "ellenorzo" WHERE 1;
+	SELECT "tantargy_neve", "jegy", "datum" FROM "ellenorzo" WHERE 1;
+	SELECT "tema", "tantargy_neve" FROM "ellenorzo" WHERE 1;
+
+SELECT
+	"tema"
+	"tantargy_neve"
+FROM
+	"ellenorzo"
+WHERE
+	1;
+	
+
+Az oszlopok a mezők nevét megváltoztathatom:
+SELECT
+	"tema" AS téma,
+	"tantargy_neve" AS "Tantárgy neve"
+FROM
+	"ellenorzo"
+WHERE
+	1;
+	
+DISTRICT opció
+Az oszlopban található egyforma értékek csak egyszer jelennek megváltoztatásra.
+
+SELECT 32*5;
+SELECT 5+6-8/3; --> 8.3333
+SELECT `szam1` + `szam2` FROM `szamitott_mezok` ;
+SELECT `szam1`, `szam2`, `szam1` + `szam2` "AS szam1 + szam2 =" FROM `szamitott_mezok`;
+
+MIN:
+SELECT MIN(`szam1`) FROM `szamitott_mezok` WHERE 1;
+SELECT `szam1`, `szam2`, MIN(`szam1`), MIN(`szam2`) FROM `szamitott_mezok` WHERE 1;
+SELECT MIN(`szam1`)AS "A szam1 legkisebb értéke", MIN(`szam2`)AS "A szam2 legkisebb értéke" FROM `szamitott_mezok` WHERE 1;
+
+
+MAX:
+SELECT
+    MAX(`szam1`) AS "A szam1 legnagyobb értéke",
+    MAX(`szam2`) AS "A szam2 legnagyobb értéke"
+FROM
+    `szamitott_mezok`
+WHERE
+    1;
+
+
+
+
+COUNT:
+SELECT COUNT(`id`) FROM `ellenorzo` WHERE 1;
+
+SELECT COUNT(*) AS "A jegyek száma:" FROM `ellenorzo` WHERE 1;
+
+SELECT `tantargy_neve`, COUNT(*) AS "A jegyek száma:" FROM `ellenorzo` WHERE 1 GROUP BY `tantargy_neve`;
+
+
+ÁTLAG:
+SELECT `tantargy_neve`, COUNT(*) AS "A jegyek száma:", AVG(`jegy`) AS "A jegyek átlaga:" FROM `ellenorzo` WHERE 1 GROUP BY `tantargy_neve`;
+
+
+
+
+tantargy_neve	
+A jegyek száma:	
+A jegyek átlaga:	
+adatbazis-kezeles
+7
+5.0000
+angol nyelv
+2
+5.0000
+digitalis kultura
+3
+5.0000
+digitalis kutlura
+1
+5.0000
+fizika
+3
+4.6667
+halozatok
+6
+4.6667
+ikt projektmunka
+1
+4.0000
+magyar
+5
+4.6000
+matematika
+2
+3.5000
+szakmai angol
+4
+4.5000
+testneveles
+4
+4.7500
+tortenelem
+3
+4.6667
