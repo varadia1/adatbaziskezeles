@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Jan 11. 11:00
+-- Létrehozás ideje: 2023. Jan 18. 11:32
 -- Kiszolgáló verziója: 10.4.20-MariaDB
 -- PHP verzió: 7.3.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `11a_1_csoport`
+-- Adatbázis: `ellenorzo1`
 --
 
 -- --------------------------------------------------------
@@ -56,7 +56,26 @@ INSERT INTO `ellenorzo` (`id`, `tantargy_neve`, `jegy`, `datum`, `tema`) VALUES
 (14, 'halozat', 1, '2022-10-18', 'irasbeli ropdolgozat'),
 (15, 'halozat', 2, '2022-10-28', 'irasbeli ropdolgozat'),
 (16, 'halozat', 4, '2022-10-25', 'orai feladat'),
-(17, 'halozat', 3, '2022-09-20', 'irasbeli ropdolgozat');
+(17, 'halozat', 3, '2022-09-20', 'irasbeli ropdolgozat'),
+(18, 'digitalis kultura', 5, '2022-12-16', 'gyakorlati feladat'),
+(19, 'digitalis kultura', 5, '2022-11-18', 'gyakorlati feladat'),
+(20, 'Adatbazis-kezeles', 5, '2022-12-14', 'orai munka'),
+(21, 'Adatbazis-kezeles', 5, '2022-11-30', 'irasbeli ropdolgozat'),
+(22, 'Adatbazis-kezeles', 4, '2022-10-26', 'Orai munka'),
+(23, 'Adatbazis kezeles', 5, '2022-10-12', 'Projektmunka'),
+(24, 'ikt projektmunka', 5, '2023-01-10', 'orai munka'),
+(25, 'ikt projektmunka', 5, '2023-01-10', 'projektmunka'),
+(26, 'halozat', 5, '2023-01-12', 'gyakorlati feladat '),
+(27, 'tortenelem', 5, '2023-01-17', 'orai munka'),
+(28, 'matematika', 5, '2023-01-13', 'irasbeli felelet'),
+(29, 'testneveles', 4, '2022-12-12', 'gyakorlati feladat'),
+(30, 'testneveles', 5, '2022-10-17', 'gyakorlati feladat'),
+(31, 'testneveles', 5, '2022-10-28', 'Orai munka'),
+(32, 'testneveles', 4, '2022-11-07', 'gyakorlati feladat'),
+(33, 'szakmai angol', 5, '2022-11-16', 'irasbeli ropdolgozat'),
+(34, 'szakmai angol', 5, '2022-11-09', 'irasbeli ropdolgozat'),
+(35, 'szakmai angol', 5, '2022-10-19', 'orai munka'),
+(36, 'szakmai angol', 4, '2022-10-06', 'irasbeli ropdolgozat');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -76,7 +95,7 @@ ALTER TABLE `ellenorzo`
 -- AUTO_INCREMENT a táblához `ellenorzo`
 --
 ALTER TABLE `ellenorzo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
