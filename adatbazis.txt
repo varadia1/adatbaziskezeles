@@ -143,3 +143,37 @@ FROM
 WHERE
     1
 GROUP BY `tantargy_neve`
+
+
+
+
+
+
+SELECT * FROM `ellenorzo` WHERE `tantargy_neve` LIKE "%";
+
+
+
+SELECT * FROM `ellenorzo` WHERE `tantargy_neve` LIKE "magyar";
+
+
+
+
+SELECT
+    *
+FROM
+    `ellenorzo`
+WHERE
+    `tantargy_neve` LIKE "m%";
+
+
+SELECT
+    *
+FROM
+    `ellenorzo`
+WHERE
+    `tantargy_neve` LIKE "m_____";
+
+
+
+
+
